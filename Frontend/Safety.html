@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Height Safety Slot Booking System</title>
+    <link rel="stylesheet" href="Safety-styles.css" />
+  </head>
+  <body>
+    <script src="Safety-script.js"></script>
+    <div class="container">
+      <div class="heading">
+        <h1>HEIGHT SAFETY SLOT BOOKING SYSTEM</h1>
+        <button id="fetch-workers-button">Click-To Get Data</button>
+      </div>
+      <div class="section">
+        <h2>Job Code Details</h2>
+        <form class="job-code-form">
+          <div class="form-item">
+            <label for="jobCode">Job Code:</label>
+            <input type="text" id="jobCode" name="jobCode" />
+          </div>
+          <div class="form-item">
+            <label for="csNo">Contractor Name</label>
+            <input type="text" id="csNo" name="csNo" />
+          </div>
+          <div class="form-item">
+            <label for="workArea">Work Area:</label>
+            <input type="text" id="workArea" name="workArea" />
+          </div>
+          <div class="form-item">
+            <label for="jobEndDate">Job End Date:</label>
+            <input type="text" id="jobEndDate" name="jobEndDate" />
+          </div>
+          <div class="form-item">
+            <label for="agency">Agency:</label>
+            <input type="text" id="agency" name="agency" />
+          </div>
+        </form>
+      </div>
+
+      <div class="table-container">
+        <div class="table-section">
+          <h2>APPLICATION</h2>
+          <table class="styled-table worker-table">
+            <thead>
+              <tr>
+                <th>Select</th>
+                <th>WorkerName</th>
+                <th>Desig</th>
+                <th>Skill</th>
+                <th>SPass No</th>
+                <th>GatePass.No</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="table-section">
+          <h4>SAFETY BELT SELECTION</h4>
+          <table class="styled-table belts-table">
+            <thead>
+              <tr>
+                <th>Select</th>
+                <th>Serial No</th>
+                <th>Make</th>
+                <th>Bis License No</th>
+                <th>Mfg Date</th>
+                <th>Sheif Life</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="heading">
+      <button id="Next-button">Next</button>
+    </div>
+  </body>
+</html>
