@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nominated Workers</title>
+    <link rel="stylesheet" href="Safety-styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>NOMINATED WORKERS</h1>
+      </div>
+
+      <div class="table-container">
+        <div class="table-section">
+          <h2>AVAILABLE SLOTS</h2>
+          <div class="month-year">
+            <input
+              id="month"
+              type="number"
+              placeholder="month"
+              min="1"
+              max="12"
+            />
+            <input
+              id="year"
+              type="number"
+              placeholder="Year"
+              min="1900"
+              max="2100"
+            />
+            <button id="check-button">Check</button>
+          </div>
+          <table class="styled-table nominated-workers-table table-scroll">
+            <thead>
+              <tr>
+                <th>Select</th>
+                <th>Slot Date</th>
+                <th>Available SLots</th>
+                <th>Booked Slots</th>
+              </tr>
+            </thead>
+            <tbody id="slots-list"></tbody>
+          </table>
+        </div>
+
+        <div class="table-section">
+          <h2>NOMINATED WORKERS</h2>
+          <table class="styled-table nominated-workers-table table-scroll">
+            <thead>
+              <tr>
+                <th>Worker Name</th>
+                <th>Skill</th>
+                <th>SPass No</th>
+                <th>GatePass No</th>
+              </tr>
+            </thead>
+            <tbody id="workers-list"></tbody>
+          </table>
+        </div>
+
+        <div class="table-section">
+          <h4>SAFETY BELT SELECTION</h4>
+          <div class="table-scroll">
+            <table class="styled-table belts-table">
+              <thead>
+                <tr>
+                  <th>Serial No</th>
+                  <th>Make</th>
+                  <th>Bis License No</th>
+                  <th>Mfg Date</th>
+                  <th>Shelf Life</th>
+                </tr>
+              </thead>
+              <tbody id="belts-list"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="heading">
+      <button id="submit">Submit</button>
+    </div>
+    <script src="Nominated-script.js"></script>
+  </body>
+</html>

@@ -7,14 +7,14 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 .heading {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .heading h1 {
@@ -22,11 +22,12 @@ body {
   color: #333;
 }
 
-.heading button {
+.heading button,
+button {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 20px;
   cursor: pointer;
   font-size: 1em;
 }
@@ -37,10 +38,10 @@ body {
 
 .section {
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .section h2 {
@@ -53,6 +54,10 @@ body {
   margin-bottom: 10px;
 }
 
+.job-code-form {
+  display: flex;
+  justify-content: space-between;
+}
 .form-item label {
   display: block;
   margin-bottom: 5px;
@@ -68,7 +73,8 @@ body {
 }
 
 .table-container {
-  overflow-x: auto;
+  display: flex;
+  gap: 5px;
 }
 
 .table-section {
@@ -77,11 +83,13 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  width: 48%;
+  overflow-y: auto;
 }
 
 .table-section h2,
 .table-section h4 {
-  font-size: 1.5em;
+  font-size: 1em;
   margin-bottom: 10px;
   color: #333;
 }
@@ -90,6 +98,7 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  overflow-x: auto;
 }
 
 .styled-table th,
@@ -112,7 +121,30 @@ body {
   background-color: #f1f1f1;
 }
 
+.table-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.month-year {
+  display: flex;
+  width: 50px;
+  padding: 5px;
+  gap: 5px;
+}
+
+#month,
+#year {
+  padding: 2px;
+}
+
 @media screen and (max-width: 768px) {
+  .table-container {
+    flex-direction: column;
+  }
+  .table-section {
+    width: 100%;
+  }
   .form-item input {
     width: 100%;
   }

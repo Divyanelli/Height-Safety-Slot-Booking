@@ -4,6 +4,7 @@ const path = require("path");
 const Worker = require("./models/WorkerModel");
 const AgencyData = require("./models/AgencyModel");
 const ContractData = require("./models/JobModel");
+const SlotData = require("./models/SlotModel");
 
 const uri =
   "mongodb+srv://divyanelli14:Divya%4014@cluster0.ydwmy0r.mongodb.net/workerDatabase?retryWrites=true&w=majority";
@@ -58,7 +59,7 @@ async function seedDatabase() {
   }
 }
 
-seedDatabase();
+//seedDatabase();
 
 //for agency data
 const rawDataa = fs.readFileSync("safety-belt DB.json");
@@ -129,3 +130,25 @@ const insertc_data = async () => {
 };
 
 //insertc_data();
+
+const slot_data = fs.readFileSync("avaialble_slots_Heights.json");
+const slots_data = JSON.parse(slot_data);
+
+const inserts_data = async () => {
+  const valid_s_Data = slots_data["data"].filter(isValidData).map((item) => ({
+    slot_date: item.SLOT_DATE,
+    avl_slots: item.AVL_SLOTS,
+    booked_slots: item.BOOKED_SLOTS,
+  }));
+
+  try {
+    await SlotData.insertMany(valid_s_Data);
+    console.log("Data successfully inserted");
+  } catch (err) {
+    console.error("Error inserting data", err);
+  } finally {
+    mongoose.connection.close();
+  }
+};
+
+//inserts_data();
